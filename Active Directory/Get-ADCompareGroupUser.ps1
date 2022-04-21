@@ -1,4 +1,4 @@
-function Get-CompareUsrGrpAD {
+function Get-ADCompareGroupUser {
 
 
     [CmdletBinding()]
