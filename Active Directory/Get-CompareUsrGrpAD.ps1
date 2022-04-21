@@ -13,10 +13,10 @@ function Get-CompareUsrGrpAD {
     )
 
     $user1 = (Get-ADPrincipalGroupMembership -Identity $Identity1 | Select-Object Name | Sort-Object -Property Name).Name
-    Write-Verbose ($user1 -join "; ")
+    Write-Verbose ($Identity1 -join "; ")
     $user2 = (Get-ADPrincipalGroupMembership -Identity $Identity2 | Select-Object Name | Sort-Object -Property Name).Name
     Write-Verbose ""
-    Write-Verbose ($user2 -join "; ")
+    Write-Verbose ($Identity2 -join "; ")
     $SameGroups = (Compare-Object $user1 $user2 -PassThru -IncludeEqual -ExcludeDifferent)
     Write-Verbose ""
     Write-Verbose ($SameGroups -join "; ")
