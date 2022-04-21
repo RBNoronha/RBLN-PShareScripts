@@ -4,8 +4,6 @@
 
 ### Copy-ADGroupUserMember
 
-Copie a associacao de um determinado grupo para outro grupo no Active Directory
-
 Copie a associacao de um determinado grupo para outro grupo no Active Directory. Por padrao, apenas os membros do grupo de origem serao copiados para o
    grupo de destino. Se o parametro `Complete` for usado, os membros do Target Group que nao sao membros do Source Group serao removidos.  Se o parametro `SINC`
     for usado, a associacao sera sincronizada entre os dois grupos.  Se um usuario for apenas membro do grupo-alvo, essa associacao tambem sera copiada
