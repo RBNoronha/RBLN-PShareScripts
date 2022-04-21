@@ -1,29 +1,32 @@
 # RBLN-PShareScripts Overview
 
-## Active Directory
+## ***Active Directory***
 
-### Copy-ADGroupUserMember
+----------------------------------------
+
+## __Copy-ADGroupUserMember__
 
 Copie a associacao de um determinado grupo para outro grupo no Active Directory. Por padrao, apenas os membros do grupo de origem serao copiados para o
    grupo de destino. Se o parametro `Complete` for usado, os membros do Target Group que nao sao membros do Source Group serao removidos.  Se o parametro `SINC`
     for usado, a associacao sera sincronizada entre os dois grupos.  Se um usuario for apenas membro do grupo-alvo, essa associacao tambem sera copiada
     para a origem.
 
+
 ```powershell
-EXAMPLE:
 PS C:\> Copy-ADGroupUserMember -GroupSource GroupUsersRedeLab -GroupTarget OrchestratorGroup
 ```
+
 Copie a associacao do Grupo 'GroupUsersRedeLab' para 'OrchestratorGroup'
 
 ```powershell
-EXAMPLE:
 PS C:\> Copy-ADGroupUserMember -GroupSource 'GroupUsersRedeLab' -GroupTarget 'OrchestratorGroup' -sinc
 ```
+
 Copie a associacao do Grupo 'GroupUsersRedeLab' para 'OrchestratorGroup' e vice-versa.
 Todas as associacoes do 'OrchestratorGroup' que NAO existem em 'GroupUsersRedeLab' tambem serao criadas em 'GroupUsersRedeLab'.
 
 ```powershell
-EXAMPLE:
+EXEMPLO:
 PS C:\> Copy-ADGroupUserMember -GroupSource 'GroupUsersRedeLab' -GroupTarget 'OrchestratorGroup' -Complete
 ```
 
@@ -31,8 +34,7 @@ Copie a associacao do Grupo 'GroupUsersRedeLab' para 'OrchestratorGroup'.
 Todas as associacoes do 'OrchestratorGroup' que NAO existem em 'GroupUsersRedeLab' serao removidas.
 
 
-
-### ConvertTo-TitleCase
+## __ConvertTo-TitleCase__
 
 Converter texto com a primeira letra da palavra sempre maiuscula
 
@@ -42,7 +44,7 @@ PS C:\> ConvertTo-TitleCase -Text "CONVERTER TEXTO"
 PS C:\> Converter Texto
 ```
 
-### ConvertTo-UpperCase
+## __ConvertTo-UpperCase__
 
 Converter texto para tudo maisculo
 
@@ -54,7 +56,7 @@ PS C:\> SEMPRE MAISCULA
 
 
 
-### Get-ADCompareGroupUser
+## __Get-ADCompareGroupUser__
 
 Comparar Grupos de segurança de usuarios
 
@@ -83,7 +85,7 @@ Remote Management Users
 Schema Admins
 ```
 
-### Get-ADCompareGroupUser
+## __Get-ADGPOLink__
 
 requer -versao 5.1
 requer -module GroupPolicy,ActiveDirectory
