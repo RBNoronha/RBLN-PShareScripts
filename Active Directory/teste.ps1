@@ -26,10 +26,11 @@ foreach ($Group in $Groups) {
     $Count += 1
     $WorkSheetName = "Group$($Count)"
     Try{
+    $Range = "A1:B1" # defining the cell range
     (Get-MgGroupMember -GroupId $Group.id -Top 150).AdditionalProperties | `
             Select-Object @{n = "DisplayName"; e = { $_.displayName } }, @{n = "UserPrincipalName"; e = { $_.userPrincipalName } } |`
             Export-Excel -Path $ExcelFilePath -WorksheetName $WorkSheetName -Append -TableStyle 'Medium16' `
-            -Title $Group.DisplayName -TitleSize 14 -TitleBold
+            -Title $Group.DisplayName -TitleSize 14 -TitleBold -Range $Range
     }
     Catch {
         Write-Host $_.Exception.Message -ForegroundColor 'Red'
