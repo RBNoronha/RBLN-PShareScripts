@@ -74,7 +74,7 @@ Write-Host -ForegroundColor yellow "<###########################################
 ""
 Write-Host -ForegroundColor Green "Script PowerShell para excluir cache , cookies em navegadores do Firefox, Chrome, e IE"
 ""
-Write-Host -ForegroundColor yellow "-------------------                   PRUDENTIAL BRASIL                 -------------------"
+Write-Host -ForegroundColor yellow "-------------------                   RENAN BESSERRA                -------------------"
 ""
 Write-Host -ForegroundColor yellow "<#######################################################""#######################################################>"
 ""
